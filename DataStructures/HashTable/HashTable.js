@@ -47,7 +47,7 @@ class HashTable {
   
   const myHashTable = new HashTable(50);
   myHashTable.set('grapes', 10000)
-  myHashTable.get('grapes')
+  console.log(myHashTable.get('grapes'))
   myHashTable.set('apples', 9)
   myHashTable.get('apples')
   myHashTable.keys();
