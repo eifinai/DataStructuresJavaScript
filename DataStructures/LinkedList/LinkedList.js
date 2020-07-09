@@ -1,15 +1,3 @@
-// let myLinkedList ={
-//     head: {
-//         value: 10,
-//         next: {
-//             value : 5,
-//             next: {
-//                 value : 16,
-//                 next : null
-//             }
-//         }
-//     }
-// }
 class Node{
     constructor(value){
         this.value = value,
@@ -47,13 +35,46 @@ class LinkedList {
         }
         return array;
     }
-    // insert = (index, value) =>{
-        
-    // }
+
+    insert = (index, value) =>{
+        if (index >= this.length){
+            return this.append(value);
+        }
+        let newNode = {
+            value: value,
+            next: null
+        };
+        const leader = this.traverseToIndex(index - 1);
+        const holdingPointer = leader.next;
+        leader.next = newNode;
+        newNode.next = holdingPointer;
+
+    }
+    remove = (index) =>{
+        if(index === 0){
+            this.head = this.head.next;
+            return
+        }
+        const leader = this.traverseToIndex(index - 1);
+        const holdingPointer = leader.next;
+        leader.next = holdingPointer.next;
+    }
+    traverseToIndex = (index) => {
+        let counter = 0;
+        let currentNode = this.head;
+        while(counter !== index){
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode;
+    }
 }
 
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
+myLinkedList.insert(2,99);
+console.log(myLinkedList.printList());
+myLinkedList.remove(0);
 console.log(myLinkedList.printList());
