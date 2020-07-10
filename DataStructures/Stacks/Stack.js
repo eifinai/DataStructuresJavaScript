@@ -18,6 +18,12 @@ class Stack{
     }
     push = (value) =>{
         const NewNode = new Node(value)
+        if(this.length === 0){
+            this.top = NewNode;
+            this.bottom = NewNode;
+            this.length++;
+            return
+        }
         NewNode.next = this.top
         this.top = NewNode;
         this.length++;
