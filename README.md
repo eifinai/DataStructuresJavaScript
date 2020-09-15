@@ -1,4 +1,2 @@
-# DataStructuresJavaScript 
-## Curso de JavaScript 
-Aqui voy subiendo mi avance en un curso de Estructuras de Datos y Algoritmos
-utilizando JavaScript
+# DataStructuresAlgorithmJavaScript 
+I'm completing a course of DataStructures and Algorithm using JavaScript
