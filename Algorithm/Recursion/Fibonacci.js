@@ -5,7 +5,7 @@
 
 //For example: fibonacciRecursive(6) should return 8
 
-function fibonacciIterative(n){
+function fibonacciIterative(n){ //O(n)
     //code here;
     if(n === 0)
     return 0
@@ -21,7 +21,7 @@ function fibonacciIterative(n){
   }
   console.log(fibonacciIterative(5));
   
-  function fibonacciRecursive(n) {
+  function fibonacciRecursive(n) { //O(n)
     //code here;
     if(n === 0)
     return 0
